@@ -1,0 +1,76 @@
+<!--pages/record/record.wxml-->
+<!--导航按钮  -->
+<view class='btns'>
+	<block wx:for="{{btns}}" wx:key="index">
+		<view class="btn {{tabFlag==index? 'bg-color':''}}" data-tab-flag="{{index}}" bindtap='changeRecord'>
+			{{item}}
+		</view>
+	</block>
+</view>
+
+<!--今日记录  -->
+<view hidden="{{tabFlag==0?false:true}}">
+	<block class='table' wx:if="{{todayRecords.length>0}}">
+		<view class='tr'>
+			<view class='td th bg-color'>时间</view>
+			<view class='td th bg-color'>秒数
+				<text wx:if="{{todayTotalSecond>0}}">(总:{{todayTotalSecond}}秒)</text>
+			</view>
+		</view>
+		<block wx:for="{{todayRecords}}" wx:key="index">
+			<view class='tr bg-gray' wx:if="{{index%2==0}}">
+				<view class='td'>{{item.time}}</view>
+				<view class='td'>{{item.seconds}}</view>
+			</view>
+			<view class='tr' wx:else>
+				<view class='td'>{{item.time}}</view>
+				<view class='td'>{{item.seconds}}</view>
+			</view>
+		</block>
+	</block>
+
+	<block wx:else> 今天还没有平板撑哦 </block>
+</view>
+
+<!--近七天记录  -->
+<view hidden="{{tabFlag==1?false:true}}">
+	<block class='table' wx:if="{{recent7Records.length>0}}">
+		<view class='tr'>
+			<view class='td th bg-color'>日期</view>
+			<view class='td th bg-color'>秒数
+				<text wx:if="{{recent7TotalSecond>0}}">(总:{{recent7TotalSecond}}秒)</text>
+			</view>
+		</view>
+		<block wx:for="{{recent7Records}}" wx:key="index">
+			<view class='tr bg-gray' wx:if="{{index%2==0}}">
+				<view class='td'>{{item.time}}</view>
+				<view class='td'>{{item.seconds}}</view>
+			</view>
+			<view class='tr' wx:else>
+				<view class='td'>{{item.time}}</view>
+				<view class='td'>{{item.seconds}}</view>
+			</view>
+		</block>
+	</block>
+</view>
+<!--近30天记录  -->
+<view hidden="{{tabFlag==2?false:true}}">
+	<block class='table' wx:if="{{recent30Records.length>0}}">
+		<view class='tr'>
+			<view class='td th bg-color'>日期</view>
+			<view class='td th bg-color'>秒数
+				<text wx:if="{{recent30TotalSecond>0}}">(总:{{recent30TotalSecond}}秒)</text>
+			</view>
+		</view>
+		<block wx:for="{{recent30Records}}" wx:key="index">
+			<view class='tr bg-gray' wx:if="{{index%2==0}}">
+				<view class='td'>{{item.time}}</view>
+				<view class='td'>{{item.seconds}}</view>
+			</view>
+			<view class='tr' wx:else>
+				<view class='td'>{{item.time}}</view>
+				<view class='td'>{{item.seconds}}</view>
+			</view>
+		</block>
+	</block>
+</view>

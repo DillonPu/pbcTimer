@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/record/record"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#04BE02",
+    "navigationBarTitleText": "撑一撑",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

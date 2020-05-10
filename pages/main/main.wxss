@@ -1,0 +1,122 @@
+/* pages/main/main.wxss */
+@import "../../iconfont/iconfont.wxss";
+
+.flex-center-h {
+  flex: 1;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.flex-center-icon {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  padding: 5px 0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.givemefive {
+  background-color: white;
+  font-size: 66rpx;
+}
+
+.time {
+  font-size: 128rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border: solid 3rpx #04be02;
+  border-radius: 50%;
+}
+
+.btn {
+  width: 256rpx;
+  height: 256rpx;
+  border-radius: 50%;
+  font-size: 64rpx;
+}
+
+.btn.active {
+  border: solid 6rpx red;
+}
+
+.icon-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200rpx;
+  height: 200rpx;
+  border: solid 1rpx #04be02;
+  border-radius: 50rpx;
+  margin: 5rpx; 
+}
+
+.icon-view .icon-text {
+  border: solid 1rpx #04be02;
+  border-radius: 20rpx;
+}
+.left-eye {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+.right-eye {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+  position: relative;
+  top: 50px;
+  left: 250px;
+}
+.mouth {
+  margin-top: 20rpx;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  border: solid 1.3vh #f7f702;
+  border-right: solid 1.3vh rgba(223,223,194,0);
+  border-left: solid 1.3vh rgba(223,223,194,0);
+  border-top: solid 1.3vh rgba(223,223,194,0);
+  position: absolute;
+}
+
+.left-foot{
+  transform:rotate(9deg);
+  width: 40rpx;
+  height: 200rpx;
+  background-color: green;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.right-foot{
+  transform:rotate(-9deg);
+  width: 40rpx;
+  height: 200rpx;
+  background-color: green;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.hand{
+  width: 150rpx;
+  height: 40rpx;
+  background-color: green;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}

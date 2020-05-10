@@ -1,0 +1,46 @@
+/* pages/record/record.wxss */
+
+.btns{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns .btn{
+  border: 1rpx solid #eee;
+  width: 200rpx;
+  padding: 10rpx;
+  text-align: center;
+  margin: 10rpx;
+  border-radius: 60rpx;
+}
+
+.table {
+  border: 1rpx solid #eee;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.td {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+}
+
+.td.th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-gray {
+  background: #eee;
+}

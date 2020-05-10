@@ -1,0 +1,40 @@
+<!--pages/main/main.wxml-->
+<view class='flex-center-h' >
+	<!--加油横幅  -->
+	<view class='flex-center givemefive'>
+		<view>加油 你是最棒的!</view>
+	</view>
+
+	<!--计时器  -->
+	<view class='flex-center time'>
+		<text>{{minute}}</text>:
+		<text>{{second}}</text>
+		<view class="{{showMouth?'mouth':''}}"></view>
+	</view>
+
+	<!--开始/继续按钮  -->
+<view class="flex-center">
+<view class="{{showHand?'hand':''}}" bindlongtap="longHand"></view>
+	<view class="flex-center btn bg-color {{flag?'active':''}}" bindtap='start'>
+		{{title}}
+	</view>
+  <view class="{{showHand?'hand':''}}" bindlongtap="longHand"></view>
+</view>
+
+	<!--功能  -->
+	<view class='flex-center'>
+
+		<!--个人记录  -->
+		<view class="flex-center-icon icon-view" bindtap='record'>
+			<text class='iconfont icon-jilu icon-text bg-color'></text>
+			<text>个人记录</text>
+		</view>
+
+	</view>
+	<view class='flex-center' >
+		<view class="{{showFoot?'left-foot':''}}">
+		</view>
+    <view class="{{showFoot?'right-foot':''}}">
+		</view>
+	</view>
+</view>

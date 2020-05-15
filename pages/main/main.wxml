@@ -2,7 +2,7 @@
 <view class='flex-center-h' >
 	<!--加油横幅  -->
 	<view class='flex-center givemefive'>
-		<view>加油 你是最棒的!</view>
+		<view>加油, 再坚持一会儿!</view>
 	</view>
 
 	<!--计时器  -->

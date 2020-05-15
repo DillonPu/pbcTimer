@@ -11,9 +11,9 @@ Page({
     flag: false,
     minute: "00",
     second: "00",
-    showMouth:false,
-    showHand:false,
-    showFoot:false
+    showMouth: false,
+    showHand: false,
+    showFoot: false
   },
 
   // 启动平板撑计时
@@ -49,19 +49,19 @@ Page({
         $this.setData({
           second: $this.handleTime(second)
         })
-        if(currentSecondTotal>90){
+        if (currentSecondTotal > 90) {
           $this.setData({
-            showMouth:true
+            showMouth: true
           })
         }
-        if(currentSecondTotal>180){
+        if (currentSecondTotal > 180) {
           $this.setData({
-            showHand:true
+            showHand: true
           })
         }
-        if(currentSecondTotal>256){
+        if (currentSecondTotal > 256) {
           $this.setData({
-            showFoot:true
+            showFoot: true
           })
         }
 
@@ -151,7 +151,7 @@ Page({
 
   },
 
-  showSmile:function(){
+  showSmile: function () {
     wx.showToast({
       title: '小鸟',
     })
@@ -181,16 +181,15 @@ Page({
     })
   },
 
-  longHand:function(){
-wx.showToast({
-  title: '坚持哦',
-})
+  longHand: function () {
+    wx.showToast({
+      title: '坚持哦',
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  },
+  onLoad: function (options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -203,8 +202,10 @@ wx.showToast({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
+
+  
 
   /**
    * 生命周期函数--监听页面隐藏

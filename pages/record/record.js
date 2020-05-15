@@ -28,7 +28,7 @@ Page({
    */
   onLoad: function (options) {
     let dateYMD = app.dateFormat("YYYY-mm-dd", new Date());
-
+    this.clearYesterdayRecord(dateYMD);
     // 当天记录数据
     let storageInfo = wx.getStorageSync('storageInfo')
     if (storageInfo != '') {
@@ -47,8 +47,6 @@ Page({
           })
         }
       }
-      
-
     }
     // 最近30天记录数据
     let recent30Records = wx.getStorageSync('recentRecords')
@@ -71,6 +69,26 @@ Page({
         recent7TotalSecond: recent7TotalSecond,
         recent30TotalSecond: recent30TotalSecond
       })
+    }
+  },
+
+  // 清理昨天的记录，今日记录只保存今天的记录
+  clearYesterdayRecord:function(dateYMD){
+    let storageInfo = wx.getStorageSync('storageInfo');
+    if (storageInfo != '') {
+      storageInfo = JSON.parse(storageInfo);
+      let recordArr = storageInfo.recordArr;
+      // 如果存在今日记录缓存数据中，则每次打开【我的今日记录】时清理掉昨天的缓存记录
+      if (recordArr.length > 0) {
+        let lastRecord = recordArr[recordArr.length - 1];
+        //当今日记录日期和今天日期相差一天及以上时，则清理掉昨天的记录
+        if (app.getDays(lastRecord.time.split(" ")[0], dateYMD) > 0) {
+          recordArr.pop();
+          storageInfo.recordArr = recordArr;
+          storageInfo.totalSecond = storageInfo.totalSecond - lastRecord.seconds;
+          wx.setStorageSync('storageInfo', JSON.stringify(storageInfo));
+        }
+      }
     }
   },
 

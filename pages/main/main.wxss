@@ -120,3 +120,7 @@
   margin-left: 50rpx;
   margin-right: 50rpx;
 }
+
+.easter-egg-txt{
+    font-size: smaller;
+}

@@ -26,11 +26,13 @@
 
 		<!--个人记录  -->
 		<view class="flex-center-icon icon-view" bindtap='record'>
-			<text class='iconfont icon-jilu icon-text bg-color'></text>
+			<text class='iconfont icon-jilu icon-text'></text>
 			<text>个人记录</text>
 		</view>
-
 	</view>
+    <view class="easter-egg-txt">
+        {{easterEggTxt}}
+    </view>
 	<view class='flex-center' >
 		<view class="{{showFoot?'left-foot':''}}">
 		</view>

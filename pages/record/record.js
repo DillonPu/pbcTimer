@@ -57,7 +57,7 @@ Page({
       let recent30TotalSecond = 0
       for (let i = 0; i < recent30Records.length; i++) {
         recent30TotalSecond += recent30Records[i].seconds
-        if (parseInt(app.getDays(recent30Records[i].time, dateYMD)) < 8) {
+        if (parseInt(app.getDays(recent30Records[i].time, dateYMD)) <= 8) {
           recent7Records.push(recent30Records[i])
           recent7TotalSecond += recent30Records[i].seconds
         }

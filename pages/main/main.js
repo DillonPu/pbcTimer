@@ -13,7 +13,9 @@ Page({
     second: "00",
     showMouth: false,
     showHand: false,
-    showFoot: false
+    showFoot: false,
+    easterEggTxt: "坚持哦后面会有4个彩蛋哦"
+    
   },
 
   // 启动平板撑计时
@@ -26,6 +28,7 @@ Page({
     //改变标题
     let flag = this.data.flag
     let title = "开始"
+    let easterEggTxt = "坚持哦后面会有4个彩蛋哦"
     if (!flag) {
 
       //开始计时
@@ -49,19 +52,22 @@ Page({
         $this.setData({
           second: $this.handleTime(second)
         })
-        if (currentSecondTotal > 90) {
+        if (currentSecondTotal >= 90) {
           $this.setData({
-            showMouth: true
+            showMouth: true,
+            easterEggTxt: "不错哦，你已经坚持90秒，哈哈发现笑脸了吗"
           })
         }
-        if (currentSecondTotal > 180) {
+        if (currentSecondTotal >= 300) {
           $this.setData({
-            showHand: true
+            showHand: true,
+            easterEggTxt: "哇哦真棒，你已经坚持五分钟了，哈哈发现了有啥不同没"
           })
         }
-        if (currentSecondTotal > 256) {
+        if (currentSecondTotal >= 491) {
           $this.setData({
-            showFoot: true
+            showFoot: true,
+            easterEggTxt: "你太棒了，打破了我的平板撑记录491秒，哈哈握个爪"
           })
         }
 
@@ -148,14 +154,8 @@ Page({
       minute: "00",
       second: "00"
     })
-
   },
 
-  showSmile: function () {
-    wx.showToast({
-      title: '小鸟',
-    })
-  },
   //处理计时值
   handleTime: function (second) {
     if (second < 10) {

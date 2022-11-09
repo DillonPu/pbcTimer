@@ -39,4 +39,5 @@
     <view class="{{showFoot?'right-foot':''}}">
 		</view>
 	</view>
+    <ad unit-id="adunit-68e25c9f2e0d6dab"></ad>
 </view>

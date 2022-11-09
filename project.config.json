@@ -10,21 +10,25 @@
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
-        }
+        },
+        "coverView": false,
+        "enhance": false,
+        "showShadowRootInWxmlPanel": false,
+        "packNpmRelationList": [],
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.27.1",
-    "appid": "wx034941704d459d2d",
-    "projectname": "pingbancheng",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
+    "libVersion": "2.27.1",
     "packOptions": {
         "ignore": [],
         "include": []
     },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
-    }
+    "appid": "wx034941704d459d2d"
 }
